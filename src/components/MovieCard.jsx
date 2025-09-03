@@ -13,7 +13,9 @@ const MovieCard = ({ movie }) => {
         <div className="movie-card-info">
           <h3 className="movie-card-title">{movie.title}</h3>
           <p className="movie-card-genre">{movie.genre}</p>
-          <p className="movie-card-rating">{getRating(movie.rating)}</p>
+          <p className={`movie-card-rating ${getRating(movie.rating)}`}>
+            {movie.rating}
+          </p>
         </div>
       </div>
     </>
