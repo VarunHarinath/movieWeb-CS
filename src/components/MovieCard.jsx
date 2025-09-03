@@ -1,5 +1,3 @@
-import React from "react";
-
 const MovieCard = ({ movie }) => {
   const getRating = (rating) => {
     if (rating >= 8) return "rating-good";
@@ -21,5 +19,4 @@ const MovieCard = ({ movie }) => {
     </>
   );
 };
-
 export default MovieCard;
