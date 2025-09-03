@@ -4,6 +4,7 @@ const MovieCard = ({ movie }) => {
     if (rating >= 5 && rating < 8) return "rating-ok";
     return "rating-bad";
   };
+
   return (
     <>
       <div key={movie.id} className="movie-card">
@@ -19,4 +20,5 @@ const MovieCard = ({ movie }) => {
     </>
   );
 };
+
 export default MovieCard;

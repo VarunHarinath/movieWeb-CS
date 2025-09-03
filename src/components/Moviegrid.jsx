@@ -1,20 +1,25 @@
 import { useState, useEffect } from "react";
 import "../styles.css";
 import MovieCard from "./MovieCard";
+
 const Moviegrid = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
   const onChangeInput = (e) => {
     setSearchTerm(e.target.value);
   };
+
   useEffect(() => {
     fetch("movies.json")
       .then((response) => response.json())
       .then((data) => setMovies(data));
   }, []);
+
   const filterChange = movies.filter((movie) =>
     movie.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   return (
     <div>
       <input
@@ -33,4 +38,5 @@ const Moviegrid = () => {
     </div>
   );
 };
+
 export default Moviegrid;

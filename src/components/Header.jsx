@@ -1,5 +1,6 @@
 import "../styles.css";
 import logo from "../../public/images/logo.png";
+
 const Header = () => {
   return (
     <>
@@ -10,4 +11,5 @@ const Header = () => {
     </>
   );
 };
+
 export default Header;
